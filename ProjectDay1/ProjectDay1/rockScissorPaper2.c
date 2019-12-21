@@ -28,13 +28,13 @@ int main() {
 	int opportunity = 0;
 	char* name[3] = { "가위", "바위", "보" }; // 가위바위보의 손의 문자열 표현
 	srand((unsigned)time(NULL));//unsigned 를 붙여서 양수 8비트로도 충분히 표현 가능 
-	computer = rand() % 3;
+
 	//printf("%d\n", computer);
 
 	printf("가위, 바위, 보 게임:\n");
 	do {
 		printf(" 가위(0), 바위(1), 보(2) , 종료(-1)  --> 숫자를 입력하세요 \n");
-
+		computer = rand() % 3;
 		scanf("%d", &user);
 
 		if (user == -1) {
