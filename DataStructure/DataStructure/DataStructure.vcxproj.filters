@@ -18,5 +18,44 @@
     <ClCompile Include="MemoryAlloc.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="stack.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="maze.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stackMaze_note.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="queue.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="maze_stack.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="maze_queue.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="queue_answer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="loopFunc.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="loopFunc2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="loopFunc3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="loopFunc4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkList_complete.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
