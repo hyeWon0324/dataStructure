@@ -22,6 +22,14 @@ void push(stack** top, int data) { //이중포인터로 받아주는 이유는 주소값을 넘겨�
 	*top = get_node();      //heap 공간과 그 주소가 정해짐 
 	(*top)->data = data;	 //10이 들어온다 
 	(*top)->link = tmp;
+	printf("push **top ==  %d \n", **top);
+	printf("push *top ==  %d \n", *top);
+	printf("push top ==  %d \n", top);
+	//printf("push (*top)->link ==  %d \n", (*top)->link);
+	printf("push tmp ==  %d \n", tmp);
+	printf("push &tmp ==  %d \n", &tmp);
+	//printf("push *tmp ==  %d \n", *tmp);
+
 }
 /*int pop(stack** top) {
 	if (*top == NULL) {

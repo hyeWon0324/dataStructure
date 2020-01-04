@@ -17,47 +17,32 @@ Queue* get_node()
 
 void Que_insert(Queue** front, Queue** rear, int data)
 {
-	Queue* tmp;
+	Queue* tmp = get_node();
 	if (*front == NULL)
-	{
-		*front = get_node();
-		tmp = *front;
-	}
-	else
-	{
-		(*rear)->link = get_node();
-		tmp = (*rear)->link;
-	}
+		*front = tmp;
+	else (*rear)->link = tmp;
+
 	*rear = tmp;
 	tmp->data = data;
 }
 int Que_delete(Queue** front)
 {
-	if (*front == NULL) {
-		return -1; 
-     }
-	Queue* tmp = *front;
-
-	int data = tmp->data;
-	*front =tmp->link;
-
-	free(tmp); 
-
-	return data; 
+	Queue* tmp;
+	int data;
+	tmp = *front;
+	*front = tmp->link;
+	data = tmp->data;
+	free(tmp);
+	return data;
 }
 
 int main()
 {
 	Queue* front = NULL, * rear = NULL;
-
 	Que_insert(&front, &rear, 10);
 	Que_insert(&front, &rear, 20);
 	Que_insert(&front, &rear, 30);
-
-
-	printf("%d\n", Que_delete(&front));
-	printf("%d\n", Que_delete(&front));
-	printf("%d\n", Que_delete(&front));
-	printf("%d\n", Que_delete(&front));
+	while (front != NULL)
+		printf("%d\n", Que_delete(&front));
 	return 0;
 }
