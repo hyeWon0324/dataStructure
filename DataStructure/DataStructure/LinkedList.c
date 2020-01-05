@@ -112,10 +112,47 @@ void AddNode(Linklist** head, int find, int data)
 		}
 	}
 }
+void EditNode(Linklist** head, int find, int data)
+{
+	if ((*head) == NULL) return;
+	else
+	{
+		if ((*head)->data == find)
+		{
+			(*head)->data = data;
+			printf("%d data node edited \n ", (*head)->data);
+		}
+		else EditNode(&((*head)->link), find, data);
+	}
+}
 
+void PrintNode(Linklist** head)
+{
+	if (*head != NULL)
+	{
+		printf("%d ", (*head)->data);
+		PrintNode(&(*head)->link);
+	}
+}
+void SearchNode(Linklist** head, int find) {
+	if ((*head) == NULL) {
+		printf("%d data node not found\n", find);
+		return;
+	}
+	else {
+		if ((*head)->data == find)
+		{
+			printf("%d data node exists \n ", (*head)->data);
+			return;
+		}
+		else SearchNode(&((*head)->link), find);
+	}
+}
 int main()
 {
 	Linklist* head = NULL;   
+
+	Linklist* head = NULL;
 
 	InsertNode(&head, 10);
 	InsertNode(&head, 20);
@@ -125,8 +162,19 @@ int main()
 	AddNode(&head, 20, 25);
 	AddNode(&head, 30, 35);
 
-	printf("%d\n", DeleteNode(&head, 20)); //지정한 데이터 삭제
+	EditNode(&head, 10, 100);
+	EditNode(&head, 20, 200);
+	EditNode(&head, 30, 300);
+
+	PrintNode(&head);
+	printf("\n");
+
+	SearchNode(&head, 15);
+	SearchNode(&head, 10);
+
+	DeleteNode(&head, 20); //지정한 데이터 삭제
 	DeleteNode(&head, 10);
-	DeleteNode(&head, 30);
+	DeleteNode(&head, 35);
+	PrintNode(&head);
 	return 0;
 }
