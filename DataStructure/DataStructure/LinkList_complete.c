@@ -13,7 +13,7 @@ Linklist* get_node()
 	tmp = (Linklist*)malloc(sizeof(Linklist));
 	tmp->link = NULL;
 
-	printf("%d \n", tmp);
+//	printf("%d \n", tmp);
 	return tmp;
 }
 
@@ -61,7 +61,7 @@ void AddNode(Linklist** head, int find, int data)
 			(*head)->link = get_node();
 			(*head)->link->data = data;
 			(*head)->link->link = tmp;
-			printf("%d data node Added\n ", data );
+			printf("%d data node Added \n ", data );
 		}
 		else AddNode(&((*head)->link), find, data);
 	}
@@ -85,7 +85,7 @@ void PrintNode(Linklist** head)
 {
 	if (*head != NULL)
 	{
-		printf("%d ", (*head)->data);
+		printf("%d :  %p\n", (*head)->data,  &(*head));
 		PrintNode(&(*head)->link);
 	}
 }
@@ -97,7 +97,7 @@ void SearchNode(Linklist** head, int find) {
 	else {
 		if ((*head)->data == find)
 		{
-			printf("%d data node exists at %p \n ", (*head)->data, (*head)->data);
+			printf("%d data node exists \n ", (*head)->data);
 			return;
 		}
 		else SearchNode( &((*head)->link), find);
@@ -110,25 +110,26 @@ int main()
 	InsertNode(&head, 10);
 	InsertNode(&head, 20);
 	InsertNode(&head, 30);
+	PrintNode(&head);
 
 	AddNode(&head, 10, 15);
 	AddNode(&head, 20, 25);
 	AddNode(&head, 30, 35);
 
-	EditNode(&head, 10, 100);
-	EditNode(&head, 20, 200);
-	EditNode(&head, 30, 300);
+	//EditNode(&head, 10, 100);
+	//EditNode(&head, 20, 200);
+	//EditNode(&head, 30, 300);
 
 	PrintNode(&head);
 	printf("\n");
 
-	SearchNode(&head, 15); 
-	SearchNode(&head, 10);
+	//SearchNode(&head, 15); 
+	//SearchNode(&head, 10);
 
-	DeleteNode(&head, 20); //지정한 데이터 삭제
-	DeleteNode(&head, 10);
-	DeleteNode(&head, 35);
-	PrintNode(&head);
+	//DeleteNode(&head, 20); //지정한 데이터 삭제
+	//DeleteNode(&head, 10);
+	//DeleteNode(&head, 35);
+	//PrintNode(&head);
 
 
 	printf("\n");

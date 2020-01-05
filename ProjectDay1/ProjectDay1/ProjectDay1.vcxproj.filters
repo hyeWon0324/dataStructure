@@ -14,4 +14,27 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="rockScissorPaper.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="rockScissorPaper2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="practiceCondition.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="practice1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="practiceLoop.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="practiceArray.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="practicePointer.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
